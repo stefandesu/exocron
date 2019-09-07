@@ -1,0 +1,33 @@
+{
+  "name": "exocron",
+  "version": "0.0.1",
+  "description": "Simple command scheduler written in Node.js",
+  "main": "bin/exocron.js",
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefandesu/exocron.git"
+  },
+  "author": "Stefan Peters",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefandesu/exocron/issues"
+  },
+  "homepage": "https://github.com/stefandesu/exocron#readme",
+  "bin": {
+    "exocron": "bin/exocron.js"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+   },
+   "pre-commit": "lint-staged",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-gbv": "git+https://github.com/gbv/eslint-config-gbv.git",
+    "lint-staged": "^9.2.5",
+    "pre-commit": "^1.2.2"
+  }
+}
