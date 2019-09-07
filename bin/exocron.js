@@ -32,9 +32,14 @@ if (!command || ["help", "--help", "-h"].includes(command)) {
   console.log("How can you actually use this?")
   console.log("You could add a cronjob that runs exocron every minute, and exocron will decide whether to run a script or not.")
   console.log("e.g. * * * * * exocron /path/to/jobsfile.json")
+  console.log("(Make sure that the Node.js environment is available for the cronjob, e.g. by setting the PATH inside the crontab file.)")
   console.log()
   console.log("exocron will output the command that is run if any.")
   process.exit(command ? 0 : 1)
+}
+if (["version", "--version", "-v"].includes(command)) {
+  console.log(require("../package.json").version)
+  process.exit(0)
 }
 const jobsfile = command
 
