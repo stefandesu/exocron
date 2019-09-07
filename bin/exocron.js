@@ -34,7 +34,7 @@ if (!command || ["help", "--help", "-h"].includes(command)) {
   console.log("e.g. * * * * * exocron /path/to/jobsfile.json")
   console.log("(Make sure that the Node.js environment is available for the cronjob, e.g. by setting the PATH inside the crontab file.)")
   console.log()
-  console.log("exocron will output the command that is run if any.")
+  console.log("exocron will output the time and the command that is run, if any.")
   process.exit(command ? 0 : 1)
 }
 if (["version", "--version", "-v"].includes(command)) {
@@ -60,7 +60,7 @@ for (const job of jobs) {
   const sinceDate = since(job)
   if (sinceDate && (!lastActualRun || sinceDate > lastActualRun)) {
     job.lastRun = new Date()
-    console.log(job.command)
+    console.log(job.lastRun.toJSON(), job.command)
     exec(job.command)
     // TODO: Add command line option to skip break.
     break
