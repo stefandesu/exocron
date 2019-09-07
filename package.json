@@ -5,7 +5,7 @@
   "main": "bin/exocron.js",
   "scripts": {
     "lint-staged": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,12 @@
   },
   "lint-staged": {
     "*.js": "eslint"
-   },
-   "pre-commit": "lint-staged",
+  },
+  "pre-commit": ["lint-staged", "test"],
   "devDependencies": {
     "eslint": "^6.3.0",
     "eslint-config-gbv": "git+https://github.com/gbv/eslint-config-gbv.git",
+    "jest": "^24.9.0",
     "lint-staged": "^9.2.5",
     "pre-commit": "^1.2.2"
   }
