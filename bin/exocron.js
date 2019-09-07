@@ -1,3 +1,3 @@
 #! /usr/bin/env node
 
-console.log("console.log output")
+console.log("Not yet implemented.")
