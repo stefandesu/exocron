@@ -1,3 +1,13 @@
 language: node_js
 node_js:
-  - 12
+- 12
+- 10
+- 8
+deploy:
+  provider: npm
+  email: stefandesu@exo.pm
+  on:
+    npm: 12
+    tags: true
+  api_key:
+    secure: cXQ55Os7PfOk93+aStZxptOeQwIVMWCiUoDPjB6PhLhxCrx3mSnSP+MVRCTVRiYcYTX7JX+fw9LWoG/R7f0Dl4paZ9jhHMuDzSQKV0HVOpX14YtIep5+fA/pllShYBa3loy2ChpM93cXwF+85ASFPQxixHpGt+Hwn3HugszWczi1bPZbC/m1CzQVkaL+81vwsi4wuoEUcIkaSPV3Ob2UPviESEAxdgjE643S3n6FwUN7KiWTl0uaZ/IoN84RlFEkyovet/CLR1YqKd855jLSTbrKtWJC34ccj49PKhgO1M0FKhuwl8Pxcroae7N9jJJaIFeVCC9q2ajxYcSSZe+hhpwR0OBNFdCxBue+b+upqXyyxyqH27is7CwN+R0myGFiUG6DovJIrHe0qW/OeF01bNC1Vbmb5Fhz8jdS1VNCQHZd6HUVVgDCzuvIfTfPVPHnWLPuAlgXtA27DEP5NEOmXFjAMZjv3WQgbjkKWMEWfkY5UGql7x5qTmuFOGBdUTG6O7eWzNSyafuqfrQpWjjvUB7wo/UNaf0ctxl+X84c+ihcEumpqr/yH/S2qICrduOSmSdcc2W1eMxcGNt7/GxjeUdfiuoWY38PtmtIcBwI/7w4ibBO3jVpAdHak0PRSfS21vYQEfdEHYtMZaDcRXginrF/ut4yhVpAeBwsvOdjJkY=
