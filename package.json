@@ -30,7 +30,7 @@
   "devDependencies": {
     "eslint": "^6.3.0",
     "eslint-config-gbv": "github:gbv/eslint-config-gbv#ecaf810",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "lint-staged": "^10.0.3",
     "pre-commit": "^1.2.2"
   }
